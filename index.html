@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu BootStrap</title>
-  <link rel="stylesheet" href="quantity.css">
+  <link rel="stylesheet" href="quantity/quantity.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-  <script src="quantity.js"></script>
+  <script src="quantity/quantity.js"></script>
   <script src="javascript.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -48,9 +48,11 @@
     </div>
   </nav>
 
-  <div class="container text-center mt-5">
-    <img class="image-home" src="home.jpg">
 
+
+  <div class="container text-center mt-5">
+
+    <img class="image-home" src="home.jpg">
 
     <!-- Title Principal -->
     <div class="row">
@@ -63,7 +65,7 @@
 
 
     <!-- Title and Subtitel Prato Principal -->
-    <div class="row">
+    <div class="row mt-2">
       <div class="col">
         <div class="display-5">
           Prato principal
@@ -73,51 +75,54 @@
     </div>
 
 
-    <div class="card" style="width: 18rem;">
-      <img src="images/bife.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Bife com Batata</h5>
-        <p class="card-text">R$30,00</p>
-        <div class="quantity buttons_added">
-          <input type="button" value="-" class="minus">
-          <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
-            class="input-text qty text" size="4" pattern="" inputmode="">
-          <input type="button" value="+" class="plus">
+    <!-- Cards Prato Principal -->
+    <div class="row mt-4 justify-content-center gap-4">
+      <div class="card" style="width: 18rem;">
+        <img src="images/bife.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bife com Batata</h5>
+          <p class="card-text">R$30,00</p>
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus">
+            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+              class="input-text qty text" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="card" style="width: 18rem;">
-      <img src="images/coxa.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Coxa de Frango Crocante</h5>
-        <p class="card-text">R$25,00</p>
-        <div class="quantity buttons_added">
-          <input type="button" value="-" class="minus">
-          <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
-            class="input-text qty text" size="4" pattern="" inputmode="">
-          <input type="button" value="+" class="plus">
+      <div class="card" style="width: 18rem;">
+        <img src="images/coxa.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Coxa de Frango Crocante</h5>
+          <p class="card-text">R$25,00</p>
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus">
+            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+              class="input-text qty text" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus">
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="card" style="width: 18rem;">
-      <img src="images/panela.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Carne de Panela</h5>
-        <p class="card-text">R$22,00</p>
-        <div class="quantity buttons_added">
-          <input type="button" value="-" class="minus">
-          <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
-            class="input-text qty text" size="4" pattern="" inputmode="">
-          <input type="button" value="+" class="plus">
+      <div class="card" style="width: 18rem;">
+        <img src="images/panela.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Carne de Panela</h5>
+          <p class="card-text">R$22,00</p>
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus">
+            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+              class="input-text qty text" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus">
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Title and Subtitel Acompanhamentos -->
-    <div class="row">
+    <div class="row mt-4">
       <div class="col">
         <div class="display-5">
           Acompanhamentos.
@@ -127,45 +132,48 @@
     </div>
 
 
-    <div class="card" style="width: 18rem;">
-      <img src="images/farofa.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Farofa</h5>
-        <p class="card-text">R$10,00</p>
-        <div class="quantity buttons_added">
-          <input type="button" value="-" class="minus">
-          <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
-            class="input-text qty text" size="4" pattern="" inputmode="">
-          <input type="button" value="+" class="plus">
+    <!--Cards Acompanhamneto -->
+    <div class="row justify-content-center gap-4">
+      <div class="card" style="width: 18rem;">
+        <img src="images/farofa.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Farofa</h5>
+          <p class="card-text">R$10,00</p>
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus">
+            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+              class="input-text qty text" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="card" style="width: 18rem;">
-      <img src="images/salad.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Salada</h5>
-        <p class="card-text">R$8,00</p>
-        <div class="quantity buttons_added">
-          <input type="button" value="-" class="minus">
-          <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
-            class="input-text qty text" size="4" pattern="" inputmode="">
-          <input type="button" value="+" class="plus">
+      <div class="card" style="width: 18rem;">
+        <img src="images/salad.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Salada</h5>
+          <p class="card-text">R$8,00</p>
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus">
+            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+              class="input-text qty text" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus">
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="card" style="width: 18rem;">
-      <img src="images/torresmo.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Torresmo</h5>
-        <p class="card-text">R$12,00</p>
-        <div class="quantity buttons_added">
-          <input type="button" value="-" class="minus">
-          <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
-            class="input-text qty text" size="4" pattern="" inputmode="">
-          <input type="button" value="+" class="plus">
+      <div class="card" style="width: 18rem;">
+        <img src="images/torresmo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Torresmo</h5>
+          <p class="card-text">R$12,00</p>
+          <div class="quantity buttons_added">
+            <input type="button" value="-" class="minus">
+            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+              class="input-text qty text" size="4" pattern="" inputmode="">
+            <input type="button" value="+" class="plus">
+          </div>
         </div>
       </div>
     </div>
@@ -186,8 +194,28 @@
         <label for="inputTelefone" class="form-label">Telefone:</label>
         <input type="tel" class="form-control" id="inputAddress" placeholder="Telefone">
       </div>
-      <div class="d-grid gap-2 col-6 mx-auto">
-        <button type="submit" class="btn btn-primary">Calcular</button>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Calcular
+      </button>
+      <!-- Modal -->
+      <div class="modal fade d-grid gap-2 col-6 mx-auto" id="exampleModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="output"></div>
