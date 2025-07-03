@@ -17,6 +17,9 @@
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
 </head>
 
 <body>
@@ -84,7 +87,7 @@
           <p class="card-text">R$30,00</p>
           <div class="quantity buttons_added">
             <input type="button" value="-" class="minus">
-            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+            <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
               class="input-text qty text" size="4" pattern="" inputmode="">
             <input type="button" value="+" class="plus">
           </div>
@@ -98,7 +101,7 @@
           <p class="card-text">R$25,00</p>
           <div class="quantity buttons_added">
             <input type="button" value="-" class="minus">
-            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+            <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
               class="input-text qty text" size="4" pattern="" inputmode="">
             <input type="button" value="+" class="plus">
           </div>
@@ -113,7 +116,7 @@
           <p class="card-text">R$22,00</p>
           <div class="quantity buttons_added">
             <input type="button" value="-" class="minus">
-            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+            <input type="number" step="1" min="0" max="" id="3" name="quantity" value="0" title="Qty"
               class="input-text qty text" size="4" pattern="" inputmode="">
             <input type="button" value="+" class="plus">
           </div>
@@ -155,7 +158,7 @@
           <p class="card-text">R$8,00</p>
           <div class="quantity buttons_added">
             <input type="button" value="-" class="minus">
-            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+            <input type="number" step="1" min="0" max="" id="5" name="quantity" value="0" title="Qty"
               class="input-text qty text" size="4" pattern="" inputmode="">
             <input type="button" value="+" class="plus">
           </div>
@@ -170,7 +173,7 @@
           <p class="card-text">R$12,00</p>
           <div class="quantity buttons_added">
             <input type="button" value="-" class="minus">
-            <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+            <input type="number" step="1" min="0" max="" id="6" name="quantity" value="0" title="Qty"
               class="input-text qty text" size="4" pattern="" inputmode="">
             <input type="button" value="+" class="plus">
           </div>
@@ -184,43 +187,39 @@
     <form class="row g-3 ">
       <div class="col-md-12 text-start">
         <label for="inputEmail4" class="form-label">Nome Completo:</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+        <input type="text" class="form-control" id="nome" placeholder="Nome">
       </div>
       <div class="col-md-6  text-start">
         <label for="inputNome" class="form-label">Email:</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        <input type="text" class="form-control" id="email" placeholder="Email">
       </div>
       <div class="col-6  text-start">
         <label for="inputTelefone" class="form-label">Telefone:</label>
-        <input type="tel" class="form-control" id="inputAddress" placeholder="Telefone">
+        <input type="tel" class="form-control" id="tel" placeholder="Telefone">
       </div>
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Calcular
       </button>
-      <!-- Modal -->
-      <div class="modal fade d-grid gap-2 col-6 mx-auto" id="exampleModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="output"></div>
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Resumo do pedido</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="output"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     $(document).ready(function () {
@@ -228,7 +227,15 @@
     });
   </script>
 
-  </div>
+
+  <script>
+    var myModal = document.getElementById('exampleModal');
+    myModal.addEventListener('show.bs.modal', function () {
+      calc();
+    });
+  </script>
+
+
 </body>
 
 </html>
